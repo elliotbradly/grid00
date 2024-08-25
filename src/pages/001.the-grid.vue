@@ -27,6 +27,8 @@ onMounted(async () => {
 
   mount('on')
 
+  console.log("goooo")
+
   //alert(window.electron.store.get('foo'));
 })
 

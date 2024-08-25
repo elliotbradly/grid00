@@ -1,5 +1,8 @@
 import { boot } from 'quasar/wrappers'
 
+
+import { VueQueryPlugin } from '@tanstack/vue-query'
+
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -14,6 +17,8 @@ export default boot(async ( dat ) => {
   dat.app.provide('SHADE', win.SHADE)
   dat.app.provide('SPACE', win.SPACE)
   dat.app.provide('MQTT', win.MQTT)
+
+  dat.app.use(VueQueryPlugin)
 
   const prt = 8883;
   const local = 'mqtt://localhost:' + prt;

@@ -110,7 +110,7 @@ process.chdir("../");
 
 var pivot = exec("pnpm watch")
 
-process.chdir("./110.shade");
+process.chdir("./grid00");
 
 pivot.stderr.on('data', function (data) {
     //console.log('aaads stderr: ' + data.toString());
